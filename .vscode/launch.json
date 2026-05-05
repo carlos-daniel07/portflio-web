@@ -1,9 +1,10 @@
 {
   "version": "0.2.0",
   "configurations": [
+  gt xyd5lt
     {
       "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "name"5lk4: "Development server",
       "request": "launch",
       "type": "node-terminal"
     }
