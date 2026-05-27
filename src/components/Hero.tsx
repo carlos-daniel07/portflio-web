@@ -1,23 +1,25 @@
+import AvatarParallax from "./AvatarParallax";
+
 const Hero = () => {
   return (
     <div className="relative w-full flex-1 flex flex-col items-center justify-center mt-16 md:mt-0 ">
-      <div className="absolute top-[1%] md:top-[10%]  w-full text-center z-0">
+      
+      {/* 1. TÍTULO: Lo bajamos a top-[12%] en móvil para quitar el hueco de arriba */}
+      <div className="absolute top-[3%] md:top-[10%] w-full text-center z-0">
         <h1 className="text-[8vw] font-display font-black text-[#d1d1d1] leading-none tracking-tight uppercase whitespace-nowrap">
           Hola, soy Carlos
         </h1>
       </div>
 
-      <div className="absolute top-[45%] md:top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
-        <div className="w-[280px] h-[350px] md:w-[380px] md:h-[480px] bg-gradient-to-b from-gray-800/80 to-transparent rounded-[100px] flex items-center justify-center border border-gray-700/50 shadow-2xl backdrop-blur-sm">
-          <span className="text-gray-400 text-center px-4 font-mono">
-            [ Avatar 3D ]<br />
-            aterrizará aquí
-          </span>
-        </div>
+      {/* 2. AVATAR: Lo subimos a top-[38%] en móvil para acercarlo al título */}
+      <div className="absolute top-[38%] md:top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <AvatarParallax/>
       </div>
 
-      <div className="absolute bottom-16 md:bottom-32 w-full max-w-7xl px-8 flex flex-col md:flex-row justify-between items-center z-20 gap-8">
-        <div className="max-w-[280px] text-left">
+      {/* 3. INFO Y BOTÓN: Lo subimos a bottom-32 en móvil para darle más aire al menú flotante */}
+      <div className="absolute bottom-32 md:bottom-32 w-full max-w-7xl px-8 flex flex-col md:flex-row justify-between items-center z-20 gap-6 md:gap-8">
+        
+        <div className="max-w-[280px] text-center md:text-left">
           <p className="text-xs md:text-sm font-sans font-semibold text-gray-300 uppercase leading-relaxed tracking-wider">
             Desarrollador de software apasionado por crear proyectos audaces y
             memorables
