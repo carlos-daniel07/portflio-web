@@ -2,11 +2,25 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects';
+import ProjectArchive from '../components/ProjectArchive';
+import About from '../components/About';
+import Experience from '../components/Experience'
+import ScrollToTop from '../components/ScrollToTop';
+import Contact from '../components/Contact';
+import StackSeparator from '../components/StackSeparator';
 ---
 
 <Layout title="Portfolio CA">
-    <main class="relative w-full h-dvh flex flex-col items-center justify-center overflow-hidden bg-[#0a0a0a] px-8">
+    <main class="relative w-full bg-[#0a0a0a]">
         <Navbar client:load />
         <Hero client:load />
+        <Projects client:load/>
+        <ProjectArchive client:load/>
+        <About client:load/>
+        <Experience client:load/>
+        <StackSeparator client:load/>
+        <Contact client:load />
+        <ScrollToTop client:load />
     </main>
 </Layout>

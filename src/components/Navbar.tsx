@@ -4,16 +4,6 @@ const Navbar = () => {
   // Array de datos: ¡Si algún día quieres cambiar un enlace, lo haces aquí y listo!
   const navItems = [
     {
-      label: "Sobre mí",
-      href: "#about",
-      // Ícono de Usuario (User)
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-        </svg>
-      )
-    },
-    {
       label: "Proyectos",
       href: "#projects",
       // Ícono de Terminal (Code)
@@ -23,6 +13,17 @@ const Navbar = () => {
         </svg>
       )
     },
+    {
+      label: "Sobre mí",
+      href: "#about",
+      // Ícono de Usuario (User)
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      )
+    },
+    
     {
       label: "Experiencia",
       href: "#experience",
