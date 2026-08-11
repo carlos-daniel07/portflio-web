@@ -1,4 +1,5 @@
 import { projects } from "../data/projects";
+
 // Diccionario visual: Recibe el texto y devuelve el SVG correspondiente
 const getTechIcon = (tech: string) => {
   const t = tech.toLowerCase();
@@ -71,7 +72,6 @@ const getTechIcon = (tech: string) => {
       </svg>
     );
 
-  // Ícono por defecto (Código) por si pones una tecnología que no está arriba
   return (
     <svg
       width="14"
@@ -96,28 +96,29 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative w-full px-4 md:px-16 py-32 bg-[#0a0a0a] min-h-screen"
+      className="relative w-full px-4 md:px-16 -mt-32 md:mt-0 pt-4 pb-8 md:pt-16 bg-[#0a0a0a] min-h-screen"
     >
-      <h2 className="text-4xl md:text-6xl font-display font-black text-[#d1d1d1] text-center mb-24 uppercase tracking-tighter">
+      <h2 className="text-4xl md:text-6xl font-display font-black text-[#d1d1d1] text-center mb-16 uppercase tracking-tighter">
         Proyectos destacados
       </h2>
 
-      <div className="flex flex-col gap-24 pb-[30vh]">
+      {/* Devolvemos el padding bottom gigante para tener espacio de scroll del naipe */}
+      <div className="flex flex-col gap-24 pb-[5vh]">
         {topProjects.map((project, index) => (
           <div
             key={project.id}
-            // 🚨 PISTA 1: Agregamos la clase 'group' aquí para controlar el hover de los hijos
-            className="group sticky w-full max-w-5xl mx-auto rounded-3xl border border-gray-800 border-t-white/20 bg-gray-900/90 backdrop-blur-xl shadow-[0_-30px_40px_-15px_rgba(0,0,0,0.8)] flex flex-col md:flex-row h-[450px] md:h-[500px] overflow-hidden transition-all duration-500 ease-out hover:shadow-[0_0_50px_rgba(30,12,199,0.2)]"
+            // 🔥 DE VUELTA EL STICKY PARA EL EFECTO NAIPE
+            className="group sticky w-full max-w-5xl mx-auto rounded-3xl border border-white/10 border-t-white/20 bg-[#0a0a0a]/95 backdrop-blur-xl shadow-[0_-30px_40px_-15px_rgba(0,0,0,0.9)] flex flex-col md:flex-row h-[450px] md:h-[500px] overflow-hidden transition-all duration-500 ease-out"
+            // 🔥 EL VERDADERO FIX: Subimos el punto de anclaje (top) a 8vh para que no se corte abajo
+            // Y quitamos el scale estático que aplastaba tus tarjetas
             style={{
-              top: `calc(15vh + ${index * 40}px)`,
-              transform: `scale(${1 - (topProjects.length - index) * 0.02})`,
+              top: `calc(8vh + ${index * 30}px)`,
             }}
           >
-            {/* El div invisible para el Inner Glow */}
             <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_1px_2px_rgba(255,255,255,0.1)] z-50"></div>
 
             {/* --- Lado Izquierdo: Textos y Botones --- */}
-            <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center relative z-10 bg-gradient-to-r from-gray-900 via-gray-900 to-transparent">
+            <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center relative z-10 bg-gradient-to-b md:bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a] to-transparent">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-md">
                 {project.title}
               </h3>
@@ -130,19 +131,16 @@ const Projects = () => {
                 {project.techTags.map((tag) => (
                   <span
                     key={tag}
-                    // Agregamos flex, items-center y gap-1.5 para alinear el ícono con el texto
-                    className="flex items-center gap-1.5 px-3 py-1.5 border border-gray-700 bg-gray-800/80 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider text-gray-200 uppercase hover:border-gray-500 transition-colors cursor-default"
+                    className="flex items-center gap-1.5 px-3 py-1.5 border border-white/10 bg-white/5 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider text-gray-200 uppercase cursor-default"
                   >
-                    {/* Llamamos a nuestro diccionario */}
                     {getTechIcon(tag)}
                     {tag}
                   </span>
                 ))}
               </div>
 
-              {/* 🚨 PISTA 3: Los Botones Híbridos (Texto + Ícono) */}
-              <div className="flex flex-wrap items-center gap-4 mt-auto pt-4">
-                {/* Botón 1: Ver en vivo */}
+              {/* Botones seguros y alineados */}
+              <div className="flex flex-wrap items-center gap-4 mt-2">
                 <a
                   href={project.url || "#"}
                   target="_blank"
@@ -150,7 +148,6 @@ const Projects = () => {
                   className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] group/btn"
                 >
                   <span>Ver proyecto</span>
-                  {/* Ícono más pequeño (18px) y con la animación de salto */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -169,12 +166,11 @@ const Projects = () => {
                   </svg>
                 </a>
 
-                {/* Botón 2: GitHub */}
                 <a
                   href={project.github || "#"}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-600 bg-gray-800/50 text-gray-300 hover:text-white hover:bg-gray-700 hover:scale-105 transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -194,16 +190,14 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* --- Lado Derecho: Imagen Fake con Zoom --- */}
-            <div className="absolute right-0 top-0 w-full md:w-3/5 h-full bg-gray-800 -z-10 overflow-hidden">
-              {/* 🚨 PISTA 2: La magia del Zoom in (group-hover:scale-110) */}
+            {/* --- Lado Derecho: Imagen --- */}
+            <div className="absolute right-0 top-0 w-full md:w-3/5 h-full bg-[#050505] -z-10 overflow-hidden">
               <img
                 src={`https://picsum.photos/seed/${project.id * 10}/800/600`}
                 alt={`Imagen de ${project.title}`}
                 className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transform transition-all duration-700 ease-in-out group-hover:scale-110"
               />
-              {/* Degradado para fusionar la imagen con el fondo oscuro del texto */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent w-full md:w-1/2 hidden md:block"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent w-full md:w-1/2 hidden md:block"></div>
             </div>
           </div>
         ))}
