@@ -37,7 +37,8 @@ const ScrollToTop = () => {
           exit={{ opacity: 0, y: 20, scale: 0.8 }}
           onClick={scrollToTop}
           // UPGRADE: Diseño tech chill con bordes de 2px, backdrop-blur y hover azul
-          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[99] p-3 md:p-4 rounded-2xl bg-[#0a0a0c]/80 backdrop-blur-md border-2 border-white/10 text-gray-400 hover:text-white hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-1 transition-all duration-300 group"
+          // 🔥 EL FIX: hidden (oculto en móvil) y md:flex (visible en escritorio)
+          className="hidden md:flex fixed md:bottom-10 md:right-10 z-[99] p-4 rounded-2xl bg-[#0a0a0c]/80 backdrop-blur-md border-2 border-white/10 text-gray-400 hover:text-white hover:border-white/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:-translate-y-1 transition-all duration-300 group"
           aria-label="Volver arriba"
         >
           {/* Ícono de flecha hacia arriba con un saltito extra al hacer hover */}
