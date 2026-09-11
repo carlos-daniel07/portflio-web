@@ -93,8 +93,8 @@ const Experience = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-16 relative z-10">
         {/* Título Principal Ajustado */}
         <div className="mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tighter leading-none">
-            Experiencia
+          <h2 className="text-4xl md:text-5xl font-display font-black uppercase text-white tracking-tighter text-center md:text-left w-full mb-6 md:mb-0">
+            EXPERIENCIA
           </h2>
         </div>
 
@@ -156,7 +156,7 @@ const Experience = () => {
         >
           <div className="md:w-1/3">
             {/* Título sección certificados (Estilo Título CARLOS) */}
-            <h3 className="text-3xl md:text-4xl font-display font-black uppercase text-white tracking-tighter">
+            <h3 className="text-3xl md:text-4xl font-display font-black uppercase text-white tracking-tighter text-center md:text-left w-full mb-6 md:mb-0">
               Educación & <br /> Certificados
             </h3>
           </div>

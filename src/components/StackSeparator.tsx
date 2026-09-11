@@ -3,45 +3,65 @@ import Matter from "matter-js";
 
 // Tu arsenal técnico ahora con Logos (SVGs) y colores de marca
 const techStack = [
+  // --- CORE FRONTEND & BACKEND ---
   {
     name: "REACT",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-  },
-  {
-    name: "TYPESCRIPT",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "JAVASCRIPT",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "NODE.JS",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "ASTRO",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
   },
   {
-    name: "TAILWIND",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    name: "TYPESCRIPT",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "NODE.JS",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+  },
+  // --- DATA & CLOUD ---
+  {
+    name: "POSTGRESQL",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "SUPABASE",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+  },
+  {
+    name: "DOCKER",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  },
+  {
+    name: "NETLIFY",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+  },
+  // --- DEVOPS & CMS ---
+  {
+    name: "GITHUB", // Logo en blanco para que se vea en el fondo negro
+    img: "https://api.iconify.design/mdi:github.svg?color=white",
   },
   {
     name: "LINUX",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
   },
   {
-    name: "SQL",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    name: "WORDPRESS",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+  },
+  // --- IA & VIBE CODING (El factor sorpresa) ---
+  {
+    name: "GEMINI AI",
+    img: "https://api.iconify.design/logos:google-gemini.svg",
   },
   {
-    name: "GIT",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    name: "CLAUDE",
+    img: "https://api.iconify.design/logos:claude-icon.svg",
   },
   {
-    name: "FIGMA",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    name: "VIBE CODING", // Ícono de destellos mágicos
+    img: "https://api.iconify.design/lucide:sparkles.svg?color=white",
   },
 ];
 

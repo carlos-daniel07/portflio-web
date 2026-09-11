@@ -17,14 +17,14 @@ const Contact = () => {
           ¿Tienes un proyecto en mente?
         </motion.p>
 
-        {/* El HABLEMOS Masivo */}
+        {/* El HABLEMOS Masivo (FIX: inline-block y pr-8 para evitar corte en el hover) */}
         <motion.a
-          href="mailto:tucorreo@email.com?subject=Propuesta%20de%20Trabajo"
+          href="mailto:carteagachamorro@gmail.com?subject=Propuesta%20de%20Trabajo"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-[4rem] md:text-[8rem] lg:text-[10rem] font-display font-black text-white uppercase tracking-tighter leading-none hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-white hover:to-gray-500 hover:scale-105 transition-all duration-500 mb-16 block"
+          className="text-[4rem] md:text-[8rem] lg:text-[10rem] font-display font-black text-white uppercase tracking-tighter leading-none hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-white hover:to-gray-500 hover:scale-105 transition-all duration-500 mb-16 inline-block pr-4 md:pr-8"
         >
           Hablemos
         </motion.a>
@@ -35,11 +35,11 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row flex-wrap justify-center items-center md:items-start gap-8 md:gap-16"
         >
           {/* GITHUB */}
           <a
-            href="https://github.com/tu-usuario"
+            href="https://github.com/carlos-daniel07"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-3 text-sm md:text-base font-semibold text-gray-400 uppercase tracking-[0.2em] hover:text-white transition-colors relative group"
@@ -64,7 +64,7 @@ const Contact = () => {
 
           {/* LINKEDIN */}
           <a
-            href="https://linkedin.com/in/tu-usuario"
+            href="https://www.linkedin.com/in/carlos-daniel-arteaga"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-3 text-sm md:text-base font-semibold text-gray-400 uppercase tracking-[0.2em] hover:text-white transition-colors relative group"
@@ -89,39 +89,52 @@ const Contact = () => {
             <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
 
-          {/* CORREO REAL */}
+          {/* CORREO (Simétrico: Dice EMAIL en vez de la ruta larga) */}
+          {/* CORREO REAL (Con el email visible abajo) */}
           <a
             href="mailto:carteagachamorro@gmail.com"
-            className="flex items-center gap-3 text-sm md:text-base font-semibold text-gray-400 uppercase tracking-[0.2em] hover:text-white transition-colors relative group"
+            className="flex flex-col items-center relative group"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="group-hover:scale-110 transition-transform"
-            >
-              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-            <span>carteagachamorro@gmail.com</span>
+            {/* Parte superior: Ícono y Título (mantiene simetría) */}
+            <div className="flex items-center gap-3 text-sm md:text-base font-semibold text-gray-400 uppercase tracking-[0.2em] group-hover:text-white transition-colors">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:scale-110 transition-transform"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>Correo</span>
+            </div>
+
+            {/* Parte inferior: Email real explícito */}
+            <span className="text-[13px] md:text-[13px] text-gray-500 normal-case tracking-widest mt-2 group-hover:text-gray-300 transition-colors">
+              carteagachamorro@gmail.com
+            </span>
+
+            {/* Subrayado animado */}
             <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
         </motion.div>
       </div>
 
       {/* --- SECCIÓN 2: LA TARJETA DEL FOOTER (CRÉDITOS Y FIRMA) --- */}
-      <div className="w-full bg-[#0a0a0c] border-t-2 border-white/10 rounded-t-[2.5rem] md:rounded-t-[4rem] px-6 md:px-16 py-10 md:py-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 md:gap-10">
-          {/* Lado Izquierdo: Nombre Outline (AHORA SOLO EL NOMBRE) */}
-          <div className="md:w-1/2 flex items-center">
+      {/* 🔥 EL FIX: pt-10 y pb-32 (padding bottom gigante) en móvil para evitar la navbar. En desktop vuelve a md:py-16 */}
+      <div className="w-full bg-[#0a0a0c] border-t-2 border-white/10 rounded-t-[2.5rem] md:rounded-t-[4rem] px-6 md:px-16 pt-10 pb-32 md:py-16">
+        {/* 🔥 EL FIX: items-center en móvil para centrar todo, md:items-start para escritorio */}
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-10">
+          {/* Lado Izquierdo: Nombre Outline */}
+          <div className="md:w-1/2 flex items-center justify-center md:justify-start w-full">
             <h2
-              className="text-5xl md:text-[5rem] font-display font-black uppercase leading-[0.85] tracking-tighter"
+              className="text-5xl md:text-[5rem] font-display font-black uppercase leading-[0.85] tracking-tighter text-center md:text-left"
               style={{
                 color: "transparent",
                 WebkitTextStroke: "1.5px rgba(255,255,255,0.8)",
@@ -134,42 +147,46 @@ const Contact = () => {
             </h2>
           </div>
 
-          {/* Lado Derecho: Estatus, Ubicación y Créditos (TODO AGRUPADO AQUÍ) */}
-          <div className="md:w-1/2 flex flex-col items-start md:items-end w-full">
+          {/* Lado Derecho: Estatus, Ubicación y Créditos */}
+          {/* 🔥 EL FIX: En móvil quitamos el pr (pr-0) y centramos todo (items-center) */}
+          <div className="md:w-1/2 flex flex-col items-center md:items-end w-full pr-0 md:pr-20">
             {/* Bloque de Estatus y Radar */}
-            <div className="flex flex-col items-start md:items-end gap-5 mb-8 pb-8 border-b border-white/10 w-full md:w-auto">
+            <div className="flex flex-col items-center md:items-end gap-5 mb-8 pb-8 border-b border-white/10 w-full md:w-auto">
               {/* Disponibilidad */}
               <span className="flex items-center gap-2 text-xs md:text-sm font-semibold text-green-400 uppercase tracking-[0.2em]">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 DISPONIBLE (OPEN TO WORK)
               </span>
 
-              {/* Radar de Ubicación Colombia */}
+              {/* Radar + Texto de Colombia Integrado */}
               <div className="flex items-center gap-4">
+                {/* Textos y etiqueta inferior */}
                 <div className="flex flex-col items-start md:items-end text-right">
                   <span className="text-xs md:text-sm font-semibold text-white uppercase tracking-[0.2em]">
-                    COLOMBIA
-                  </span>
-                  <span className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-[0.2em]">
                     100% REMOTO
                   </span>
+                  {/* Las letras de Colombia más claritas y abajo */}
+                  <span className="text-[10px] md:text-xs font-mono font-bold text-orange-400 uppercase tracking-[0.2em] mt-0.5">
+                    📍 COLOMBIA
+                  </span>
                 </div>
-                {/* Animación de Radar Tech */}
-                <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#050505] border border-white/10 overflow-hidden group shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-                  {/* Líneas de coordenadas */}
-                  <div className="absolute w-full h-[1px] bg-blue-500/30"></div>
-                  <div className="absolute h-full w-[1px] bg-blue-500/30"></div>
-                  {/* Punto de ubicación palpitando */}
-                  <div className="absolute w-2 h-2 mt-2 ml-2 bg-blue-500 rounded-full animate-ping opacity-75"></div>
-                  <div className="absolute w-2 h-2 mt-2 ml-2 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa]"></div>
+
+                {/* El Radar Tech con el punto naranja */}
+                <div className="relative flex items-center justify-center w-11 h-11 rounded-full bg-[#050505] border border-white/10 overflow-hidden group shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                  {/* Líneas de coordenadas del radar */}
+                  <div className="absolute w-full h-[1px] bg-orange-500/30"></div>
+                  <div className="absolute h-full w-[1px] bg-orange-500/30"></div>
+                  {/* Punto de ubicación palpitando en naranja */}
+                  <div className="absolute w-2 h-2 bg-orange-500 rounded-full animate-ping opacity-75"></div>
+                  <div className="absolute w-2 h-2 bg-orange-400 rounded-full shadow-[0_0_10px_#f97316]"></div>
                 </div>
               </div>
             </div>
 
             {/* Copyright y Créditos */}
-            <div className="flex flex-col items-start md:items-end gap-3 text-[10px] md:text-xs font-semibold text-gray-600 uppercase tracking-[0.2em] md:text-right">
+            <div className="flex flex-col items-center md:items-end gap-3 text-[10px] md:text-xs font-semibold text-gray-600 uppercase tracking-[0.2em] text-center md:text-right">
               <p>
-                © {new Date().getFullYear()} CARLOS. TODOS LOS DERECHOS
+                © {new Date().getFullYear()} CARLOS ARTEAGA. TODOS LOS DERECHOS
                 RESERVADOS.
               </p>
               <p>
