@@ -26,7 +26,10 @@ const Hero = () => {
         </div>
 
         <div>
-          <button className="group relative inline-flex items-center justify-center px-10 py-4 rounded-full border border-white/20 bg-[#050505] overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.03)]">
+          <a
+            href="#contact"
+            className="group relative inline-flex items-center justify-center px-10 py-4 rounded-full border border-white/20 bg-[#050505] overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.03)]"
+          >
             {/* --- EL HUMO ORGÁNICO Y CAÓTICO --- */}
             <div className="absolute inset-0 z-10 pointer-events-none mix-blend-screen opacity-60">
               <motion.div
@@ -92,7 +95,7 @@ const Hero = () => {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>

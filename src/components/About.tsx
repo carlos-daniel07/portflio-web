@@ -48,7 +48,7 @@ const About = () => {
 
               {/* Botón Hablemos (Se queda igual) */}
               <a
-                href="#contacto"
+                href="#contact"
                 className="inline-block px-8 py-3 rounded-full border-2 border-blue-500/50 bg-blue-500/10 text-white font-bold text-sm tracking-widest uppercase hover:bg-blue-500 hover:text-white hover:scale-105 transition-all duration-300"
               >
                 Hablemos

@@ -190,7 +190,7 @@ const Contact = () => {
                 RESERVADOS.
               </p>
               <p>
-                DISEÑADO EN LA MATRIX. INSPIRADO POR{" "}
+                INSPIRADO POR{" "}
                 <a
                   href="https://www.youtube.com/shorts/mF8Bkx1zDeo"
                   target="_blank"
