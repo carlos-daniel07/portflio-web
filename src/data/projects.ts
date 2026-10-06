@@ -428,7 +428,7 @@ export const projects = [
     id: 32,
     title: "Hero Slider Multimedial",
     description:
-      "Sección hero con slider de elementos `` superpuestos. El sistema de JavaScript sincroniza bloques de texto flotante transparentes usando técnicas de backdrop-filter para garantizar legibilidad.",
+      "Sección hero con slider de elementos de video superpuestos. El sistema de JavaScript sincroniza bloques de texto flotante transparentes usando técnicas de backdrop-filter para garantizar legibilidad.",
     techTags: ["HTML5", "CSS3", "JavaScript"],
     image:
       "https://res.cloudinary.com/dwdyg6evh/image/upload/v1790370601/video-hero-slider-with-text_acprwc.webp",

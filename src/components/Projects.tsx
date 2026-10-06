@@ -120,7 +120,9 @@ const Projects = () => {
                   >
                     <img
                       src={techIconUrls[tag] || defaultIcon}
-                      alt={`${tag} icon`}
+                      alt=""
+                      width={14}
+                      height={14}
                       className="w-3.5 h-3.5 object-contain"
                     />
                     {tag}
@@ -136,6 +138,7 @@ const Projects = () => {
                     href={project.url}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`Visitar el sitio de ${project.title}`}
                     className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                   >
                     <span>Visitar sitio</span>
@@ -183,6 +186,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`Ver el código de ${project.title} en GitHub`}
                     className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                   >
                     <svg
@@ -208,7 +212,9 @@ const Projects = () => {
             <div className="absolute right-0 top-0 w-full md:w-3/5 h-full bg-[#050505] -z-10 overflow-hidden">
               <img
                 src={project.image}
-                alt={`Imagen de ${project.title}`}
+                alt={project.alt || project.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transform transition-all duration-700 ease-in-out group-hover:scale-105"
               />
 

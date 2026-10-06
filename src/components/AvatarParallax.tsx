@@ -21,7 +21,7 @@ export default function AvatarParallax() {
         {/* Tu imagen normal, sin transformaciones Z extrañas */}
         <img
           src="/avatar-sf.png"
-          alt="Avatar Carlos"
+          alt="Avatar de Carlos Arteaga, desarrollador web full stack"
           className="w-full md:w-[95%] h-auto object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.7)] pointer-events-none"
         />
       </motion.div>

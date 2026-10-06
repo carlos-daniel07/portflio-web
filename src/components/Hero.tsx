@@ -8,6 +8,10 @@ const Hero = () => {
       <div className="absolute top-[6%] md:top-[12%] w-full text-center z-0 px-4">
         <h1 className="text-[12vw] sm:text-[10vw] md:text-[8vw] font-display font-black text-[#d1d1d1] leading-none tracking-tight uppercase md:whitespace-nowrap">
           Hola, soy Carlos
+          <span className="sr-only">
+            {" "}
+            Arteaga, desarrollador web full stack
+          </span>
         </h1>
       </div>
 
@@ -20,8 +24,9 @@ const Hero = () => {
       <div className="absolute bottom-48 md:bottom-16 w-full max-w-7xl px-8 flex flex-col md:flex-row justify-between items-center z-20 gap-8 md:gap-8">
         <div className="max-w-[280px] md:max-w-[320px] text-center md:text-left">
           <p className="text-xs md:text-sm font-sans font-semibold text-gray-200 uppercase leading-relaxed tracking-[0.2em]">
-            Me dedico a escribir código y resolver problemas. Hago que tus ideas
-            se vean increíbles en internet. Así de simple.
+            Soy desarrollador web full stack. Me dedico a escribir código y
+            resolver problemas. Hago que tus ideas se vean increíbles en
+            internet. Así de simple.
           </p>
         </div>
 

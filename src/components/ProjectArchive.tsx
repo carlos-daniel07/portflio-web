@@ -185,6 +185,7 @@ const ProjectArchive = () => {
                         rel="noreferrer"
                         className="p-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 text-gray-300 hover:bg-white hover:text-black transition-colors duration-300"
                         title="Ver código"
+                        aria-label={`Ver código de ${project.title} en GitHub`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -208,6 +209,7 @@ const ProjectArchive = () => {
                         rel="noreferrer"
                         className="p-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 text-gray-300 hover:bg-[#38BDF8] hover:text-black transition-colors duration-300"
                         title="Ver en vivo"
+                        aria-label={`Ver ${project.title} en vivo`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +249,9 @@ const ProjectArchive = () => {
                       >
                         <img
                           src={techIconUrls[tag] || defaultIcon}
-                          alt={`${tag} icon`}
+                          alt=""
+                          width={14}
+                          height={14}
                           className="w-3.5 h-3.5 object-contain"
                         />
                         {tag}
