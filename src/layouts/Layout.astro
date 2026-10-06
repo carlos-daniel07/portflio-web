@@ -1,5 +1,31 @@
 ---
 import "../styles/global.css";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Carlos Arteaga",
+  jobTitle: "Desarrollador Web Full Stack",
+  description:
+    "Desarrollador web full stack. Creo interfaces rápidas y escalables con React, Astro, Tailwind CSS, Node.js y bases de datos.",
+  url: "https://carlosarteaga.netlify.app/",
+  image:
+    "https://res.cloudinary.com/dwdyg6evh/image/upload/v1790894331/carlos-arteaga-og_gfgipn.webp",
+  knowsAbout: [
+    "Desarrollo web",
+    "React",
+    "Astro",
+    "Tailwind CSS",
+    "Node.js",
+    "JavaScript",
+    "Bases de datos",
+  ],
+  sameAs: [
+    "https://github.com/carlos-daniel07",
+    "https://www.linkedin.com/in/carlos-daniel-arteaga/",
+  ],
+};
 ---
 
 <!doctype html>
@@ -15,6 +41,13 @@ import "../styles/global.css";
     />
     <meta name="author" content="Carlos Arteaga" />
     <meta name="theme-color" content="#0a0a0a" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={canonicalURL} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(schema)}
+    />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
