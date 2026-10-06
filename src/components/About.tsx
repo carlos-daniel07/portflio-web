@@ -63,10 +63,11 @@ const About = () => {
               {/* Contenedor de la foto que ahora se estira correctamente */}
               <div className="relative z-10 h-full w-full rounded-[2rem] border-2 border-white/10 overflow-hidden bg-black/50">
                 <img
-                  // 🔥 Te puse una foto de código oscura de prueba, cámbiala por la tuya cuando quieras
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
-                  alt="Perfil"
+                  alt="Pantalla con código de programación"
                   className="h-full w-full object-cover mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

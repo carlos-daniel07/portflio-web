@@ -91,14 +91,13 @@ const Experience = () => {
       className="relative w-full py-24 bg-[#050505] overflow-hidden border-t border-white/5"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-16 relative z-10">
-        {/* Título Principal Ajustado */}
         <div className="mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-black uppercase text-white tracking-tighter text-center md:text-left w-full mb-6 md:mb-0">
             EXPERIENCIA
           </h2>
         </div>
 
-        {/* --- LISTA DE EXPERIENCIA --- */}
+        {/* --- Listado de experiencias --- */}
         <div className="flex flex-col border-t-2 border-white/10">
           {stages.map((stage, i) => (
             <motion.div
@@ -111,7 +110,10 @@ const Experience = () => {
             >
               {/* Bloque Izquierdo: ID y Rol */}
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 md:w-5/12 mb-6 md:mb-0">
-                <span className="text-3xl md:text-4xl font-display font-black text-white/10 group-hover:text-white/20 transition-colors pointer-events-none tracking-tighter">
+                <span
+                  aria-hidden="true"
+                  className="text-3xl md:text-4xl font-display font-black text-white/10 group-hover:text-white/20 transition-colors pointer-events-none tracking-tighter"
+                >
                   {stage.id}
                 </span>
                 <div>
@@ -139,7 +141,7 @@ const Experience = () => {
                 <div className="text-xs md:text-sm font-semibold text-gray-300 uppercase tracking-[0.2em]">
                   {stage.date}
                 </div>
-                <p className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-[0.2em]">
+                <p className="text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-[0.2em]">
                   {stage.status}
                 </p>
               </div>
@@ -170,7 +172,9 @@ const Experience = () => {
                 {/* Tag pequeño: plataforma + fecha, arriba y en su propia línea */}
                 <div className="flex gap-3 text-xs md:text-sm font-semibold text-gray-400 uppercase tracking-[0.2em] mb-2">
                   <span>{cert.issuer}</span>
-                  <span className="text-gray-600">•</span>
+                  <span aria-hidden="true" className="text-gray-600">
+                    •
+                  </span>
                   <span>{cert.year}</span>
                 </div>
 

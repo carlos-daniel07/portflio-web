@@ -134,7 +134,15 @@ const TechStackPhysics = () => {
     World.add(world, mouseConstraint);
 
     const runner = Runner.create();
-    Runner.run(runner, engine);
+    // Los movimientos solo corren cuando el separador está visible en la pantalla, para ahorrar recursos
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        Runner.run(runner, engine);
+      } else {
+        Runner.stop(runner);
+      }
+    });
+    observer.observe(sceneRef.current);
 
     Matter.Events.on(engine, "afterUpdate", () => {
       bodies.forEach((body, index) => {
@@ -147,6 +155,7 @@ const TechStackPhysics = () => {
     });
 
     return () => {
+      observer.disconnect();
       Runner.stop(runner);
       Engine.clear(engine);
     };
@@ -157,9 +166,12 @@ const TechStackPhysics = () => {
     <section className="relative w-full h-[300px] bg-[#050505] border-y border-white/10 overflow-hidden cursor-grab active:cursor-grabbing">
       {/* Título de Fondo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h2 className="text-6xl md:text-[8rem] font-display font-black text-white/[0.03] uppercase tracking-tighter leading-none select-none">
+        <p
+          aria-hidden="true"
+          className="text-6xl md:text-[8rem] font-display font-black text-white/[0.03] uppercase tracking-tighter leading-none select-none"
+        >
           MI STACK
-        </h2>
+        </p>
       </div>
 
       {/* Contenedor de Físicas */}
@@ -178,8 +190,12 @@ const TechStackPhysics = () => {
             <img
               src={tech.img}
               alt={`${tech.name} logo`}
+              width={24}
+              height={24}
               className="w-6 h-6 object-contain drop-shadow-md"
               draggable="false" // Previene bugs visuales al arrastrar la imagen
+              loading="lazy"
+              decoding="async"
             />
             {tech.name}
           </div>

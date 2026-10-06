@@ -13,14 +13,14 @@ import StackSeparator from "../components/StackSeparator";
 
 <Layout>
   <main class="relative w-full bg-[#0a0a0a]">
-    <Navbar client:load />
+    <Navbar client:idle />
     <Hero client:load />
-    <Projects client:load />
-    <ProjectArchive client:load />
-    <About client:load />
-    <Experience client:load />
-    <StackSeparator client:load />
-    <Contact client:load />
-    <ScrollToTop client:load />
+    <Projects />
+    <ProjectArchive client:visible={{ rootMargin: "300px" }} />
+    <About client:visible={{ rootMargin: "300px" }} />
+    <Experience client:visible={{ rootMargin: "300px" }} />
+    <StackSeparator client:visible={{ rootMargin: "300px" }} />
+    <Contact client:visible={{ rootMargin: "300px" }} />
+    <ScrollToTop client:idle />
   </main>
 </Layout>

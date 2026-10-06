@@ -88,9 +88,7 @@ const Contact = () => {
             <span>LinkedIn</span>
             <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-
-          {/* CORREO (Simétrico: Dice EMAIL en vez de la ruta larga) */}
-          {/* CORREO REAL (Con el email visible abajo) */}
+          {/* Correo */}
           <a
             href="mailto:carteagachamorro@gmail.com"
             className="flex flex-col items-center relative group"
@@ -116,7 +114,7 @@ const Contact = () => {
             </div>
 
             {/* Parte inferior: Email real explícito */}
-            <span className="text-[13px] md:text-[13px] text-gray-500 normal-case tracking-widest mt-2 group-hover:text-gray-300 transition-colors">
+            <span className="text-[13px] md:text-[13px] text-gray-400 normal-case tracking-widest mt-2 group-hover:text-gray-300 transition-colors">
               carteagachamorro@gmail.com
             </span>
 
@@ -133,7 +131,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-10">
           {/* Lado Izquierdo: Nombre Outline */}
           <div className="md:w-1/2 flex items-center justify-center md:justify-start w-full">
-            <h2
+            <p
               className="text-5xl md:text-[5rem] font-display font-black uppercase leading-[0.85] tracking-tighter text-center md:text-left"
               style={{
                 color: "transparent",
@@ -144,7 +142,7 @@ const Contact = () => {
               <span className="text-white" style={{ WebkitTextStroke: "0px" }}>
                 DEV
               </span>
-            </h2>
+            </p>
           </div>
 
           {/* Lado Derecho: Estatus, Ubicación y Créditos */}
@@ -184,7 +182,7 @@ const Contact = () => {
             </div>
 
             {/* Copyright y Créditos */}
-            <div className="flex flex-col items-center md:items-end gap-3 text-[10px] md:text-xs font-semibold text-gray-600 uppercase tracking-[0.2em] text-center md:text-right">
+            <div className="flex flex-col items-center md:items-end gap-3 text-[10px] md:text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] text-center md:text-right">
               <p>
                 © {new Date().getFullYear()} CARLOS ARTEAGA. TODOS LOS DERECHOS
                 RESERVADOS.

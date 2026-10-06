@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/montserrat/latin-900.css";
 
 const schema = {
   "@context": "https://schema.org",
@@ -99,12 +102,6 @@ const schema = {
     />
 
     <!-- FUENTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@900&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body class="bg-[#0a0a0a] text-gray-100 antialiased overflow-x-hidden">
