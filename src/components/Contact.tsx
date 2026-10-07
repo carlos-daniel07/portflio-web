@@ -20,6 +20,7 @@ const Contact = () => {
         {/* El HABLEMOS Masivo (FIX: inline-block y pr-8 para evitar corte en el hover) */}
         <motion.a
           href="mailto:carteagachamorro@gmail.com?subject=Propuesta%20de%20Trabajo"
+          aria-label="Hablemos: enviarme un correo"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

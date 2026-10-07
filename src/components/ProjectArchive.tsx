@@ -272,7 +272,7 @@ const ProjectArchive = () => {
             onClick={() => setVisibleCount((prev) => prev + 3)}
             className="group relative overflow-hidden mt-16 px-8 py-3 rounded-full border border-white/10 text-gray-300 font-semibold hover:text-black hover:border-white transition-all duration-300"
           >
-            <span className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></span>
+            <span className="absolute inset-0 bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out z-0"></span>
             <span className="relative z-10">Ver más proyectos</span>
           </motion.button>
         )}
