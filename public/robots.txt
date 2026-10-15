@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://carlosarteaga.netlify.app/sitemap-index.xml
+Sitemap: https://carlosarteaga.dev/sitemap-index.xml

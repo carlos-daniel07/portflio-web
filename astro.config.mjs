@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://carlosarteaga.netlify.app",
+  site: "https://carlosarteaga.dev",
   integrations: [react(), tailwind(), sitemap()],
 });
