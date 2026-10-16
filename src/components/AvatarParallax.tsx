@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function AvatarParallax() {
   return (
     // Contenedor principal limpio, sin eventos de mouse ni perspectivas 3D
-    <div className="relative w-[280px] h-[300px] max-w-[95vw] md:w-[500px] md:h-[650px] flex items-center justify-center">
+    <div className="relative w-[230px] h-[250px] min-[380px]:w-[280px] min-[380px]:h-[300px] max-w-[95vw] md:w-[500px] md:h-[650px] flex items-center justify-center">
       {/* Contenedor animado: Solo mantiene la levitación y rotación suave */}
       <motion.div
         className="relative flex items-center justify-center w-full h-full"

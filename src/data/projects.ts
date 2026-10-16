@@ -117,19 +117,19 @@ export const projects = [
     isTop: false,
     alt: "Pantalla de inicio del juego Flappy Kiro hecho con Canvas, mostrando instrucciones para comenzar",
   },
-  {
-    id: 9,
-    title: "Swipe Cards: Interfaz de App de Citas",
-    description:
-      "Interfaz de tarjetas deslizables con arrastre fluido por mouse y touch, rotación proporcional a la distancia arrastrada, feedback visual de LIKE/NOPE con opacidad dinámica y animación de retorno o salida.",
-    techTags: ["HTML5", "CSS3", "JavaScript"],
-    image:
-      "https://res.cloudinary.com/dwdyg6evh/image/upload/v1790370597/swipe-cards-match-app_xhjljt.webp",
-    url: "https://swipecardmatch.netlify.app/",
-    github: "https://github.com/carlos-daniel07/swipe-cards-match-app",
-    isTop: false,
-    alt: "Interfaz de tarjetas deslizables estilo app de citas en mockup de celular, con botones de like y nope",
-  },
+  // {
+  //   id: 9,
+  //   title: "Swipe Cards: Interfaz de App de Citas",
+  //   description:
+  //     "Interfaz de tarjetas deslizables con arrastre fluido por mouse y touch, rotación proporcional a la distancia arrastrada, feedback visual de LIKE/NOPE con opacidad dinámica y animación de retorno o salida.",
+  //   techTags: ["HTML5", "CSS3", "JavaScript"],
+  //   image:
+  //     "https://res.cloudinary.com/dwdyg6evh/image/upload/v1790370597/swipe-cards-match-app_xhjljt.webp",
+  //   url: "https://swipecardmatch.netlify.app/",
+  //   github: "https://github.com/carlos-daniel07/swipe-cards-match-app",
+  //   isTop: false,
+  //   alt: "Interfaz de tarjetas deslizables estilo app de citas en mockup de celular, con botones de like y nope",
+  // },
   {
     id: 10,
     title: "JS Playground: Editor de Código",

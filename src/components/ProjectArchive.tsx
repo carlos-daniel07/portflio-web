@@ -37,8 +37,6 @@ const techIconUrls: Record<string, string> = {
   JSON: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
   "Material UI":
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
-  "AWS Amplify":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amplify/amplify-original.svg",
   HTML5:
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
   HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
@@ -70,14 +68,9 @@ const techIconUrls: Record<string, string> = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   "Parallax.js":
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-  "Kiro (AI)":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg",
+
   npm: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
 };
-
-// Ícono genérico por si falta alguno en la lista
-const defaultIcon =
-  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg";
 
 // 🚨 1. Categorías principales limpias
 const mainFilters = ["Todos", "React", "JavaScript", "Astro", "HTML/CSS"];
@@ -138,7 +131,7 @@ const ProjectArchive = () => {
               }`}
             >
               {activeFilter !== category && (
-                <span className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></span>
+                <span className="absolute inset-0 bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out z-0"></span>
               )}
               <span className="relative z-10">{category}</span>
             </button>
@@ -247,13 +240,15 @@ const ProjectArchive = () => {
                         key={tag}
                         className="flex items-center gap-1.5 text-[11px] font-sans font-semibold uppercase tracking-wider text-gray-300 bg-white/5 border border-white/10 px-2.5 py-1.5 rounded-md transition-colors hover:border-white/30"
                       >
-                        <img
-                          src={techIconUrls[tag] || defaultIcon}
-                          alt=""
-                          width={14}
-                          height={14}
-                          className="w-3.5 h-3.5 object-contain"
-                        />
+                        {techIconUrls[tag] && (
+                          <img
+                            src={techIconUrls[tag]}
+                            alt=""
+                            width={14}
+                            height={14}
+                            className="w-3.5 h-3.5 object-contain"
+                          />
+                        )}
                         {tag}
                       </span>
                     ))}

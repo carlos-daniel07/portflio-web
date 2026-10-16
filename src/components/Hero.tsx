@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="relative w-full flex-1 flex flex-col items-center justify-center mt-16 md:mt-0 min-h-screen ">
+    <div className="relative w-full flex-1 flex flex-col items-center justify-center mt-10 md:mt-0 min-h-screen pb-40 md:pb-0 ">
       {/* 1. TÍTULO: Lo subimos a md:top-[8%] en escritorio para darle aire arriba */}
-      <div className="absolute top-[6%] md:top-[12%] w-full text-center z-0 px-4">
+      <div className="relative md:absolute md:top-[12%] w-full text-center z-0 px-4">
         <h1 className="text-[12vw] sm:text-[10vw] md:text-[8vw] font-display font-black text-[#d1d1d1] leading-none tracking-tight uppercase md:whitespace-nowrap">
           Hola, soy Carlos
           <span className="sr-only">
@@ -16,17 +16,17 @@ const Hero = () => {
       </div>
 
       {/* 2. AVATAR: Lo bajamos a md:top-[55%] en escritorio para destapar el título */}
-      <div className="absolute top-[35%] md:top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+      <div className="relative z-10 md:absolute md:top-[55%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
         <AvatarParallax />
       </div>
 
       {/* 3. INFO Y BOTÓN: Lo bajamos a md:bottom-16 para matar el espacio vacío de abajo */}
-      <div className="absolute bottom-48 md:bottom-16 w-full max-w-7xl px-8 flex flex-col md:flex-row justify-between items-center z-20 gap-8 md:gap-8">
+      <div className="relative md:absolute md:bottom-16 w-full max-w-7xl px-8 flex flex-col md:flex-row justify-between items-center z-20 gap-6 md:gap-8">
         <div className="max-w-[280px] md:max-w-[320px] text-center md:text-left">
           <p className="text-xs md:text-sm font-sans font-semibold text-gray-200 uppercase leading-relaxed tracking-[0.2em]">
             Soy desarrollador web full stack. Me dedico a escribir código y
             resolver problemas. Hago que tus ideas se vean increíbles en
-            internet. Así de simple.
+            internet.
           </p>
         </div>
 

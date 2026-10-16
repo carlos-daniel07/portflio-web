@@ -34,8 +34,9 @@ const techIconUrls: Record<string, string> = {
   JSON: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
   "Material UI":
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
-  "AWS Amplify":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amplify/amplify-original.svg",
+  "AWS Amplify": "https://api.iconify.design/logos:aws-amplify.svg",
+  "Kiro (AI)":
+    "https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900",
   HTML5:
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
   HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
@@ -67,8 +68,6 @@ const techIconUrls: Record<string, string> = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   "Parallax.js":
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-  "Kiro (AI)":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg",
   npm: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
 };
 
@@ -93,7 +92,7 @@ const Projects = () => {
           <div
             key={project.id}
             // 🔥 DE VUELTA EL STICKY PARA EL EFECTO NAIPE
-            className="group sticky w-full max-w-5xl mx-auto rounded-3xl border border-white/10 border-t-white/20 bg-[#0a0a0a]/95 backdrop-blur-xl shadow-[0_-30px_40px_-15px_rgba(0,0,0,0.9)] flex flex-col md:flex-row h-[450px] md:h-[500px] overflow-hidden transition-all duration-500 ease-out"
+            className="group sticky w-full max-w-5xl mx-auto rounded-3xl border border-white/10 border-t-white/20 bg-[#0a0a0a]/95 backdrop-blur-xl shadow-[0_-30px_40px_-15px_rgba(0,0,0,0.9)] flex flex-col md:flex-row h-[470px] md:h-[500px] overflow-hidden transition-all duration-500 ease-out"
             // 🔥 EL VERDADERO FIX: Subimos el punto de anclaje (top) a 8vh para que no se corte abajo
             // Y quitamos el scale estático que aplastaba tus tarjetas
             style={{
@@ -103,16 +102,16 @@ const Projects = () => {
             <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_1px_2px_rgba(255,255,255,0.1)] z-50"></div>
 
             {/* --- Lado Izquierdo: Textos y Botones --- */}
-            <div className="w-full md:w-[45%] p-8 md:p-12 flex flex-col justify-center relative z-10 bg-gradient-to-b md:bg-gradient-to-r from-[#0a0a0a] from-60% to-transparent">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-md">
+            <div className="w-full md:w-[45%] p-6 md:p-12 flex flex-col flex-1 md:flex-none md:justify-center relative z-10 bg-gradient-to-b md:bg-gradient-to-r from-[#0a0a0a] from-60% to-transparent">
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 drop-shadow-md">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 mb-8 leading-relaxed line-clamp-5">
+              <p className="text-sm md:text-base text-gray-400 mb-5 md:mb-8 leading-relaxed line-clamp-3 md:line-clamp-5">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-2 md:gap-3 mb-5 md:mb-8">
                 {project.techTags.map((tag) => (
                   <span
                     key={tag}
@@ -131,7 +130,7 @@ const Projects = () => {
               </div>
 
               {/* Botones 100% Dinámicos basados en la data real */}
-              <div className="flex flex-wrap items-center gap-4 mt-2">
+              <div className="flex flex-wrap items-center gap-3 md:gap-4 mt-auto md:mt-2 pt-4 md:pt-0">
                 {/* 1. Botón Principal: Si hay URL, es "Visitar sitio". Si está vacío, es "Ver Demo" */}
                 {project.url ? (
                   <a
@@ -139,7 +138,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Visitar el sitio de ${project.title}`}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    className="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                   >
                     <span>Visitar sitio</span>
                     <svg
@@ -161,7 +160,7 @@ const Projects = () => {
                 ) : (
                   <a
                     href="#demo"
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    className="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                   >
                     <span>Ver Demo</span>
                     <svg
@@ -187,7 +186,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Ver el código de ${project.title} en GitHub`}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 bg-white/5 text-gray-300 hover:text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                    className="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-gray-200 hover:text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

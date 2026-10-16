@@ -6,7 +6,7 @@ const Contact = () => {
       id="contact"
       className="relative w-full pt-32 bg-[#050505] overflow-hidden"
     >
-      {/* --- SECCIÓN 1: EL LLAMADO A LA ACCIÓN Y REDES --- */}
+      {/* --- REDES --- */}
       <div className="max-w-6xl mx-auto px-4 md:px-16 relative z-10 flex flex-col items-center justify-center text-center mb-24">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -17,7 +17,7 @@ const Contact = () => {
           ¿Tienes un proyecto en mente?
         </motion.p>
 
-        {/* El HABLEMOS Masivo (FIX: inline-block y pr-8 para evitar corte en el hover) */}
+        {/* HABLEMOS */}
         <motion.a
           href="mailto:carteagachamorro@gmail.com?subject=Propuesta%20de%20Trabajo"
           aria-label="Hablemos: enviarme un correo"
