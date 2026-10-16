@@ -7,7 +7,7 @@ const Hero = () => {
       {/* 1. TÍTULO: Lo subimos a md:top-[8%] en escritorio para darle aire arriba */}
       <div className="relative md:absolute md:top-[12%] w-full text-center z-0 px-4">
         <h1 className="text-[12vw] sm:text-[10vw] md:text-[8vw] font-display font-black text-[#d1d1d1] leading-none tracking-tight uppercase md:whitespace-nowrap">
-          Hola, soy Carlos Daniel
+          Hola, soy Carlos
           <span className="sr-only">
             {" "}
             Arteaga, desarrollador web full stack
