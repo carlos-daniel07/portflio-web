@@ -46,14 +46,52 @@ const About = () => {
                 marcan la diferencia.
               </p>
 
-              {/* Botón Hablemos (Se queda igual) */}
-              <a
-                href="#contact"
-                aria-label="Hablemos: ir a la sección de contacto"
-                className="inline-block px-8 py-3 rounded-full border-2 border-blue-500/50 bg-blue-500/10 text-white font-bold text-sm tracking-widest uppercase hover:bg-blue-500 hover:text-white hover:scale-105 transition-all duration-300"
-              >
-                Hablemos
-              </a>
+              {/* Botón Hablemos */}
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="#contact"
+                  aria-label="Hablemos: ir a la sección de contacto"
+                  className="inline-block px-8 py-3 rounded-full border-2 border-blue-500/50 bg-blue-500/10 text-white font-bold text-sm tracking-widest uppercase hover:bg-blue-500 hover:text-white hover:scale-105 transition-all duration-300"
+                >
+                  Hablemos
+                </a>
+
+                <details className="group relative">
+                  <summary className="list-none inline-flex cursor-pointer items-center gap-2 px-6 py-3 rounded-full border-2 border-white/20 bg-white/5 text-gray-200 font-bold text-sm tracking-widest uppercase hover:border-white/50 hover:text-white transition-all duration-300 [&::-webkit-details-marker]:hidden">
+                    Descargar CV
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="transition-transform duration-300 group-open:rotate-180"
+                    >
+                      <polyline points="6 15 12 9 18 15"></polyline>
+                    </svg>
+                  </summary>
+                  <div className="absolute bottom-full left-0 z-30 mb-2 w-52 overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0c] shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+                    <a
+                      href="/cv/Carlos_Arteaga_CV-ES.pdf"
+                      download
+                      className="block px-5 py-3 text-sm font-semibold text-gray-200 hover:bg-white/10 hover:text-white"
+                    >
+                      Español (PDF)
+                    </a>
+                    <a
+                      href="/cv/Carlos Arteaga - CV-EN.pdf"
+                      download
+                      className="block px-5 py-3 text-sm font-semibold text-gray-200 hover:bg-white/10 hover:text-white"
+                    >
+                      English (PDF)
+                    </a>
+                  </div>
+                </details>
+              </div>
             </div>
 
             {/* Área para la Imagen / Avatar */}
